@@ -3,7 +3,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 API_key.json
-img*.png
 notebook.txt
 .idea/
 
