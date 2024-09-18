@@ -5,6 +5,7 @@ __pycache__/
 API_key.json
 notebook.txt
 .idea/
+API_request_output.json
 
 # C extensions
 *.so
