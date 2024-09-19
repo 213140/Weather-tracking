@@ -1,4 +1,5 @@
-from API_request_functions import *
+from api_weather_service import ApiWeatherService
+from weather_data import  WeatherData
 import json
 
 # Get API Key : <https://openweathermap.org/api>
@@ -14,9 +15,17 @@ def write_json(path, json_data):
 base_url = 'https://api.openweathermap.org/data/2.5/weather'
 jsonapi_key = read_json('API_key.json')['key'] # 'YOUR_API_KEY'
 
-data = get_weather_data_by_city_name(base_url, 'London', jsonapi_key, 'metric')
-write_json("API_request_output.json", data)
-print(data['weather'][0]['description'])
-print(data['main']['temp'])
-print(data['main']['pressure'])
-print(data['main']['humidity'])
+if __name__== "__main__":
+    new_service = ApiWeatherService(base_url, jsonapi_key)
+    data = new_service.get_weather_data_by_city_name('London')
+
+    write_json("logs/API_request_output.json", data)
+    weather_object = WeatherData(data['main']['temp'],
+                                 data['main']['humidity'],
+                                 data['wind']['speed'],
+                                 data['weather'][0]['description'],
+                                 f"lon: {data['coord']['lon']}\n {data['coord']['lat']}")
+
+    print(weather_object.description)
+    print(weather_object.temperature)
+    print(weather_object.humidity)

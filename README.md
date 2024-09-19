@@ -11,11 +11,11 @@ https://openweathermap.org/api
 For authentication purpose please follow below instruction (need to be done before start follow execute section)
 1) Sign up using below link: https://openweathermap.org/api
 2) Confirm your email using invitation email
-![img.png](img.png)
+![img.png](images/img.png)
 3) Select below version:
-![img_2.png](img_2.png)
+![img_2.png](images/img_2.png)
 4) Than select below option:
-![img_3.png](img_3.png)
+![img_3.png](images/img_3.png)
 5) Copy your own key (it should be provided you by new email)
 
 ## Execute instruction
