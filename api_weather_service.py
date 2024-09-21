@@ -4,10 +4,9 @@ Class and all implemented functions for requesting data from API
 import requests
 
 class ApiWeatherService:
-    base_url = ""
-    jsonapi_key = ""
+    jsonapi_key: str
 
-    def __init__(self, base_url, jsonapi_key):
+    def __init__(self, jsonapi_key, base_url= 'https://api.openweathermap.org/data/2.5/weather'):
         self.base_url = base_url
         self.jsonapi_key = jsonapi_key
 
@@ -21,4 +20,7 @@ class ApiWeatherService:
             'units': data_units
         }
         response = requests.get(self.base_url, params=parameters)
-        return response.json()
+        if response.status_code == 200:
+            return response.json()
+        else:
+            response.raise_for_status()
