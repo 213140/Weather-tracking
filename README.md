@@ -5,7 +5,7 @@ Presented application was based on free API (authentication is required) - 1,000
 https://openweathermap.org/api
 
 ### Additional information
- 1) ,,main" branch is relevant to CLI version of APP. Other versions of application will be added as separate  branches
+1) **TODO**: GUI will be added in two variants: desktop App (flet) and Web App (streamlit)
 
 ## Installation & preconfiguration
 For authentication purpose please follow below instruction (need to be done before start follow execute section)
@@ -19,5 +19,11 @@ For authentication purpose please follow below instruction (need to be done befo
 5) Copy your own key (it should be provided you by new email)
 
 ## Execute instruction
-1) Paste your own key into **API_key.json** file instead of ,,**YOUR OWN API KEY**" string located under **key** item
-2) To be defined...
+1) Create **API_key.json** file in project folder (hided file in repository, need to be created on local machine) 
+2) Paste below json object:
+{
+  "key" : "YOUR_OWN_API_KEY"
+}
+3) Instead of ,,**YOUR_OWN_API_KEY**" string located under **key** item paste your generated key
+4) Run main.py script without any argument. As result, you receive description of current weather, temperature and humidity for London city.
+5) **TODO**: CLI extended functionality will be implemented soon
