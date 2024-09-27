@@ -3,9 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 API_key.json
+.logs/
 notebook.txt
 .idea/
-.logs/
+.API_output/
 
 # C extensions
 *.so
@@ -36,7 +37,7 @@ MANIFEST
 *.manifest
 *.spec
 
-# Installer logs
+# Installer API_output
 pip-log.txt
 pip-delete-this-directory.txt
 
